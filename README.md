@@ -32,10 +32,6 @@
   (file: File) => Promise<GetInfoFromFile>
   ```
 
-  ```js
-  import { GetInfoFromFile } from 'fileasy'
-  ```
-
 - getDataFromByte
   ```text
   (size: number) => {formatNum: number; unit: string; full: string;}
@@ -50,4 +46,23 @@
 - copyToClipbord
   ```text
   (data: number | string | boolean) => void
+  ```
+
+## types
+
+- GetInfoFromFile
+
+  ```text
+  {
+      file: File;
+      path: string;
+      type: string;
+      name: string;
+      size: number;
+      stringBytes: string;
+      width: number;
+      height: number;
+      base64: string;
+      extension: string;
+  }
   ```
