@@ -1,11 +1,16 @@
 import { GetInfoFromFile } from 'src/types'
 
-export const easyDownload = (fileData?: GetInfoFromFile) => {
+export const easyDownload = (fileData?: GetInfoFromFile | File) => {
 	if (!fileData) return
 
 	const a = document.createElement('a')
-	a.href = fileData.base64
-	a.download = `${fileData.name}.${fileData.extension}`
+	if (fileData instanceof File) {
+		a.href = URL.createObjectURL(fileData)
+		a.download = fileData.name
+	} else {
+		a.href = fileData.base64
+		a.download = `${fileData.name}.${fileData.extension}`
+	}
 
 	document.body.appendChild(a)
 	a.click()

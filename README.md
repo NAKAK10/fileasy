@@ -41,12 +41,16 @@
   ```text
   (size: number) => {formatNum: number; unit: string; full: string;}
   ```
+- selectFile
+  ```text
+  (accept?: string, maxLen?: number) => Promise<File[] | undefined>
+  ```
 
 ## other
 
 - easyDownload
   ```text
-  (fileData?: GetInfoFromFile) => void
+  (fileData?: GetInfoFromFile | File) => void
   ```
 - copyToClipbord
   ```text

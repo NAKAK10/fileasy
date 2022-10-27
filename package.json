@@ -1,14 +1,14 @@
 {
 	"name": "fileasy",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"description": "",
 	"workspaces": [
-		"packages/*"
+		"test/"
 	],
 	"scripts": {
-		"test": "vitest",
+		"test": "npm run dev -w test",
 		"build": "tsc",
 		"deploy": "npx tsc && npm publish"
 	},
