@@ -1,0 +1,26 @@
+{
+	"name": "fileasy",
+	"version": "0.1.0",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"description": "",
+	"workspaces": [
+		"packages/*"
+	],
+	"scripts": {
+		"test": "vitest",
+		"build": "tsc",
+		"deploy": "npx tsc && npm publish"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com.private:NAKAK10/fileasy"
+	},
+	"homepage": "https://github.com/NAKAK10/fileasy",
+	"author": "Kieju Nakashima - NAKAK10",
+	"license": "ISC",
+	"devDependencies": {
+		"typescript": "^4.8.4",
+		"vitest": "^0.24.3"
+	}
+}

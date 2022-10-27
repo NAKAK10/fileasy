@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"useDefineForClassFields": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"strict": true,
+		"jsx": "preserve",
+		"sourceMap": true, // ← 追記（ソースマップを出力する）
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"allowJs": true,
+		"declaration": true,
+		"lib": ["esnext", "dom", "ES2020"],
+		"outDir": "dist",
+		"baseUrl": ".",
+		"paths": { "src/*": ["src/*"] }
+	},
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.d.ts",
+		"src/**/*.tsx",
+		"src/**/*.vue",
+		"src/**/*.js"
+	]
+}
