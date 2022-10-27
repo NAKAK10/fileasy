@@ -1,5 +1,10 @@
 # fileasy
 
+- [conversion](#conversion)
+- [get](#get)
+- [other](#other)
+- [types](#types)
+
 ## conversion
 
 - base64ToFile
