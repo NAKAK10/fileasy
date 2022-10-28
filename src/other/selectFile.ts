@@ -1,11 +1,15 @@
 export const selectFile = (
-	accept = 'image/*',
+	accept = '',
 	maxLen = 1
 ): Promise<File[] | undefined> => {
 	if (maxLen < 1) throw { message: 'invalid number' }
 	const _inputfile = document.createElement('input')
 	_inputfile.type = 'file'
-	_inputfile.accept = accept
+
+	if (accept) {
+		_inputfile.accept = accept
+	}
+
 	if (maxLen > 1) {
 		_inputfile.multiple = true
 	}

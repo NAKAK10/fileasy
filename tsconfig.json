@@ -6,7 +6,7 @@
 		"moduleResolution": "node",
 		"strict": true,
 		"jsx": "preserve",
-		"sourceMap": true, // ← 追記（ソースマップを出力する）
+		"sourceMap": true,
 		"resolveJsonModule": true,
 		"esModuleInterop": true,
 		"allowJs": true,

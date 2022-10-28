@@ -22,11 +22,15 @@
   ```
 - svgToJpeg
   ```text
-  (svgBase64: string, name?: string, fillStyle?: string) => Promise<File>
+  (svgData: string | File, name?: string, fillStyle?: string) => Promise<File>
   ```
 - svgToPng
   ```text
-  (svgBase64: string, name?: string) => Promise<File>
+  (svgData: string | File, name?: string) => Promise<File>
+  ```
+- pdfToPng
+  ```text
+  (pdfFile: File, pageNum?: number) => Promise<File[]>
   ```
 
 ## get
@@ -48,13 +52,15 @@
 
 ## other
 
-- easyDownload
+- downloadToDevice
+
   ```text
   (fileData?: GetInfoFromFile | File) => void
   ```
-- copyToClipbord
+
+- selectFile
   ```text
-  (data: number | string | boolean) => void
+  (accept?: string, maxLen?: number) => Promise<File[] | undefined>
   ```
 
 ## types

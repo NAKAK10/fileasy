@@ -1,6 +1,6 @@
 {
 	"name": "fileasy",
-	"version": "0.1.1",
+	"version": "0.1.6",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"description": "",
@@ -9,8 +9,11 @@
 	],
 	"scripts": {
 		"test": "npm run dev -w test",
-		"build": "tsc",
-		"deploy": "npx tsc && npm publish"
+		"build": "tsc && tsc-alias",
+		"deploy": "tsc && tsc-alias && npm publish",
+		"docs:dev": "vitepress dev docs",
+		"docs:build": "vitepress build docs",
+		"docs:serve": "vitepress serve docs"
 	},
 	"repository": {
 		"type": "git",
@@ -19,8 +22,13 @@
 	"homepage": "https://github.com/NAKAK10/fileasy",
 	"author": "Kieju Nakashima - NAKAK10",
 	"license": "ISC",
+	"dependencies": {
+		"pdfjs-dist": "^2.16.105"
+	},
 	"devDependencies": {
-		"typescript": "^4.8.4",
+		"@types/pdfjs-dist": "^2.10.378",
+		"tsc-alias": "^1.7.0",
+		"vitepress": "^1.0.0-alpha.26",
 		"vitest": "^0.24.3"
 	}
 }

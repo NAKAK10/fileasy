@@ -1,6 +1,5 @@
 import { getDataFromByte } from './getDataFromByte'
-import { fileToBase64 } from './fileToBase64'
-import { fileToHTMLImageElement } from './fileToHTMLImageElement'
+import { fileToBase64, fileToHTMLImageElement } from '../convert'
 
 import { GetInfoFromFile } from 'src/types'
 

@@ -1,14 +1,21 @@
 <script setup lang="ts">
-import { selectFile as _selectFile } from '../../src'
+import { ref } from 'vue'
+import { selectFile as _selectFile, pdfToPng } from '../../src'
+
+const path = ref('')
 
 const selectFile = async () => {
-	const d = await _selectFile(undefined, 2)
-	console.log(d)
+	const d = await _selectFile()
+	if (!d) return
+
+	const png = await pdfToPng(d[0], 100)
+	path.value = URL.createObjectURL(png[0])
 }
 </script>
 
 <template>
 	<button @click="selectFile">selectFile</button>
+	<img :src="path" v-if="path" />
 </template>
 
 <style scoped>

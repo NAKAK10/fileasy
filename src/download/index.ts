@@ -1,1 +1,1 @@
-export { easyDownload } from './easyDownload'
+export { downloadToDevice } from './downloadToDevice'

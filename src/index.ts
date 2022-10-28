@@ -1,6 +1,6 @@
 export * from './types'
 
-export * from './file'
+export * from './convert'
 export * from './download'
-
-export { copyToClipbord } from './copyToClipbord'
+export * from './get'
+export * from './other'

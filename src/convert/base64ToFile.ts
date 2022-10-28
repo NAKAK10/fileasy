@@ -1,12 +1,4 @@
-/**
- * base64からtypeを取得
- */
-export const getTypeFromDataURI = (base64: string) => {
-	if (!base64.includes('data:')) return ''
-	const g = base64.match(/data:(.+);base64,/)
-	if (!g || g.length < 2) return ''
-	return g[1]
-}
+import { getTypeFromDataURI } from '../get'
 
 /**
  * base64からFileに変換
@@ -29,8 +21,7 @@ export const base64ToFile = (
 	if (getType && type && getType !== type)
 		throw new Error('第二引数を確認してください。')
 
-	// ファイルオブジェクト生成(この例ではjpegファイル)
-	return new File([buffer.buffer], `${fileName || 'tempData'}`, {
+	return new File([buffer.buffer], `${fileName || 'tmpData'}`, {
 		type: getType || type,
 	})
 }
