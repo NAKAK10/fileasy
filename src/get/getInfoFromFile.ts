@@ -9,7 +9,13 @@ import { GetInfoFromFile } from 'src/types'
 export const getInfoFromFile = async (file: File): Promise<GetInfoFromFile> => {
 	const base64 = await fileToBase64(file)
 	const path = URL.createObjectURL(file)
-	const image = await fileToHTMLImageElement(path)
+
+	const imageSize = { width: 0, height: 0 }
+	if (file.type.includes('image')) {
+		const image = await fileToHTMLImageElement(path)
+		imageSize.width = image.width
+		imageSize.height = image.height
+	}
 
 	return {
 		file,
@@ -18,8 +24,8 @@ export const getInfoFromFile = async (file: File): Promise<GetInfoFromFile> => {
 		name: file?.name,
 		size: file?.size,
 		stringBytes: getDataFromByte(file?.size).full,
-		width: image.width,
-		height: image.height,
+		width: imageSize.width,
+		height: imageSize.height,
 		base64,
 		extension: file?.name.split('.').pop() ?? '',
 	}

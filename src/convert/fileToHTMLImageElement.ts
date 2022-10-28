@@ -2,14 +2,15 @@
  * pathからHTMLImageElementを作成
  */
 export const fileToHTMLImageElement = async (
-  path: string
+	path: string
 ): Promise<HTMLImageElement> => {
-  const image = new Image()
+	const image = new Image()
 
-  return new Promise((resolve, rejects) => {
-    image.onload = () => {
-      resolve(image)
-    }
-    image.src = path
-  })
+	return new Promise((resolve, rejects) => {
+		image.onload = () => {
+			resolve(image)
+		}
+		console.log(path)
+		image.src = path
+	})
 }

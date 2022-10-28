@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { selectFile as _selectFile, pdfToPng } from '../../src'
+import { selectFile as _selectFile, getInfoFromFile } from '../../src'
 
 const path = ref('')
 
@@ -8,8 +8,8 @@ const selectFile = async () => {
 	const d = await _selectFile()
 	if (!d) return
 
-	const png = await pdfToPng(d[0], 100)
-	path.value = URL.createObjectURL(png[0])
+	const da = await getInfoFromFile(d[0])
+	console.log(da)
 }
 </script>
 

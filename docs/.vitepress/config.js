@@ -1,11 +1,15 @@
 export default {
 	lang: 'ja',
 	title: 'fileasy',
-	description: 'fileasy',
+	description: 'fileasy - Nakashima Package Manager',
 	siteTitle: 'fileasy Docs',
 	socialLinks: [{ icon: 'github', link: 'https://github.com/NAKAK10/fileasy' }],
 	themeConfig: {
 		sidebar: [
+			{
+				text: '',
+				items: [{ text: 'install', link: 'public/install' }],
+			},
 			{
 				text: 'get',
 				items: [
