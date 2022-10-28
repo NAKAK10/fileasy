@@ -14,8 +14,8 @@ export default {
 				text: 'get',
 				items: [
 					{ text: 'getInfoFromFile', link: '/get/getInfoFromFile' },
-					{ tetx: 'getTypeFromDataURI', link: '/get/getTypeFromDataURI' },
 					{ text: 'getDataFromByte', link: '/get/getDataFromByte' },
+					{ text: 'getTypeFromDataURI', link: '/get/getTypeFromDataURI' },
 				],
 			},
 			{

@@ -5,6 +5,10 @@
 - [other](#other)
 - [types](#types)
 
+## documantation
+
+[fileasy.rucuru.com](https://fileasy.rucuru.com/)
+
 ## conversion
 
 - base64ToFile
