@@ -3,7 +3,7 @@ export default {
 	title: 'fileasy',
 	description: 'fileasy - Nakashima Package Manager',
 	siteTitle: 'fileasy Docs',
-	socialLinks: [{ icon: 'github', link: 'https://github.com/NAKAK10/fileasy' }],
+
 	themeConfig: {
 		sidebar: [
 			{
@@ -12,6 +12,8 @@ export default {
 			},
 			{
 				text: 'get',
+				collapsible: true,
+				collapsed: true,
 				items: [
 					{ text: 'getInfoFromFile', link: '/get/getInfoFromFile' },
 					{ text: 'getDataFromByte', link: '/get/getDataFromByte' },
@@ -20,10 +22,14 @@ export default {
 			},
 			{
 				text: 'compress',
+				collapsible: true,
+				collapsed: true,
 				items: [{ text: 'compressImage', link: '/compress/compressImage' }],
 			},
 			{
 				text: 'convert',
+				collapsible: true,
+				collapsed: true,
 				items: [
 					{ text: 'base64ToFile', link: '/convert/base64ToFile' },
 					{ text: 'fileToBase64', link: '/convert/fileToBase64' },
@@ -32,19 +38,34 @@ export default {
 						link: '/convert/fileToHTMLImageElement',
 					},
 					{ text: 'pdfToPng', link: '/convert/pdfToPng' },
-					{ text: 'svgToJpeg', link: '/convert/svgToJpeg' },
 					{ text: 'svgToPng', link: '/convert/svgToPng' },
+					{ text: 'svgToJpeg', link: '/convert/svgToJpeg' },
 				],
 			},
-
+			{
+				text: 'judgement',
+				collapsible: true,
+				collapsed: true,
+				items: [
+					{ text: 'isMimeType', link: '/judge/isMimeType' },
+					{ text: 'isMp3', link: '/judge/isMp3' },
+					{ text: 'isMp4', link: '/judge/isMp4' },
+					{ text: 'isPdf', link: '/judge/isPdf' },
+					{ text: 'isXml', link: '/judge/isXml' },
+				],
+			},
 			{
 				text: 'download',
+				collapsible: true,
+				collapsed: true,
 				items: [
 					{ text: 'downloadToDevice', link: '/download/downloadToDevice' },
 				],
 			},
 			{
 				text: 'other',
+				collapsible: true,
+				collapsed: true,
 				items: [{ text: 'selectFile', link: '/other/selectFile' }],
 			},
 		],

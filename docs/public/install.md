@@ -1,4 +1,4 @@
-# What is fileasy?
+# What is fileasy:tada:
 
 - png などの画像のリサイズや圧縮も可能です。
 - base64 から png への変換

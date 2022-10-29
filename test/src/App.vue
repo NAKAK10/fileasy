@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { selectFile as _selectFile, getInfoFromFile } from '../../src'
+import { isPdf } from '../../src'
 
 const path = ref('')
 
@@ -9,7 +10,9 @@ const selectFile = async () => {
 	if (!d) return
 
 	const da = await getInfoFromFile(d[0])
-	console.log(da)
+
+	console.log(isPdf(da.file))
+	console.log(isPdf(da.base64))
 }
 </script>
 
