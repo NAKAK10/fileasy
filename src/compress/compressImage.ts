@@ -12,11 +12,13 @@ export const compressImage = async (
 	const info = await getInfoFromFile(file)
 
 	if (per > 100 || per < 0)
-		throw new Error('第二引数は、0から100の間で設定してください。')
+		throw new Error('Set the second argument between 0 and 100.')
 	if (size > 100 || size < 0)
-		throw new Error('第二引数は、0から100の間で設定してください。')
+		throw new Error('Set the second argument between 0 and 100.')
 
-	if (!info.type.includes('image')) throw new Error('画像のみ圧縮可能です。')
+	if (!info.type.includes('image')) {
+		throw new Error('Only images can be compressed.')
+	}
 
 	const canvas = document.createElement('canvas')
 	canvas.width = info.width * (size / 100)

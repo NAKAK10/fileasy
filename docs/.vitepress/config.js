@@ -3,8 +3,20 @@ export default {
 	title: 'fileasy',
 	description: 'fileasy - Nakashima Package Manager',
 	siteTitle: 'fileasy Docs',
+	lastUpdated: true,
+
+	head: [['meta', { property: 'og:image', content: '/icons/media.png' }]],
 
 	themeConfig: {
+		socialLinks: [
+			{ icon: 'github', link: 'https://github.com/NAKAK10/fileasy' },
+		],
+
+		footer: {
+			message: 'Hi👋',
+			copyright: 'Copyright © 2022-present Keiju Nakashima',
+		},
+
 		sidebar: [
 			{
 				text: '',
@@ -69,9 +81,5 @@ export default {
 				items: [{ text: 'selectFile', link: '/other/selectFile' }],
 			},
 		],
-		footer: {
-			message: 'Hi👋',
-			copyright: 'Copyright © 2022-present Keiju Nakashima',
-		},
 	},
 }
