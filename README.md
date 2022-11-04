@@ -1,4 +1,4 @@
-![media](https://raw.githubusercontent.com/NAKAK10/fileasy/main/docs/public/media.png)
+![media](https://raw.githubusercontent.com/NAKAK10/fileasy/main/docs/public/media-dark.png)
 
 # fileasy
 
