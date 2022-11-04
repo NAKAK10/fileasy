@@ -5,7 +5,10 @@ export default {
 	siteTitle: 'fileasy Docs',
 	lastUpdated: true,
 
-	head: [['meta', { property: 'og:image', content: '/media.png' }]],
+	head: [
+		['meta', { property: 'og:image', content: '/media.png' }],
+		['meta', { property: 'og:site_name', content: 'fileasy' }],
+	],
 
 	themeConfig: {
 		socialLinks: [
