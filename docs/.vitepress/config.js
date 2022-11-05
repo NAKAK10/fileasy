@@ -6,7 +6,10 @@ export default {
 	lastUpdated: true,
 
 	head: [
-		['meta', { property: 'og:image', content: '/media.png' }],
+		[
+			'meta',
+			{ property: 'og:image', content: 'https://fileasy.rucuru.com/media.png' },
+		],
 		['meta', { property: 'og:site_name', content: 'fileasy' }],
 	],
 
