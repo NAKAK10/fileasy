@@ -64,6 +64,12 @@
   (fileData?: GetInfoFromFile | File) => void
   ```
 
+- downloadFromURL
+
+  ```text
+  (url: string, type: string, name: string, fun?: ((rogress: number) => void) | undefined): Promise<File>
+  ```
+
 - selectFile
   ```text
   (accept?: string, maxLen?: number) => Promise<File[] | undefined>

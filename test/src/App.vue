@@ -1,18 +1,29 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { selectFile as _selectFile, getInfoFromFile } from '../../src'
-import { isPdf } from '../../src'
+import { isPdf, downloadFromURL } from '../../src'
 
 const path = ref('')
 
 const selectFile = async () => {
-	const d = await _selectFile()
-	if (!d) return
+	// const d = await _selectFile()
+	// if (!d) return
+	// const da = await getInfoFromFile(d[0])
+	// console.log(isPdf(da.file))
+	// console.log(isPdf(da.base64))
 
-	const da = await getInfoFromFile(d[0])
+	const path = ''
 
-	console.log(isPdf(da.file))
-	console.log(isPdf(da.base64))
+	const file = await downloadFromURL(
+		path,
+		'abc.pdf',
+		'application/pdf',
+		(progress: number) => {
+			console.log(progress)
+		}
+	)
+
+	console.log(file)
 }
 </script>
 
