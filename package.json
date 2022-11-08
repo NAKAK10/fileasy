@@ -1,6 +1,6 @@
 {
 	"name": "fileasy",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"description": "",
@@ -27,8 +27,11 @@
 		"download",
 		"client",
 		"typescript",
-		"file convert",
-		"image compress"
+		"javascript",
+		"check-file-type",
+		"what-MimeType",
+		"file-convert",
+		"image-compress"
 	],
 	"dependencies": {
 		"pdfjs-dist": "^2.16.105"
