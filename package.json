@@ -22,6 +22,14 @@
 	"homepage": "https://github.com/NAKAK10/fileasy",
 	"author": "Kieju Nakashima - NAKAK10",
 	"license": "ISC",
+	"keywords": [
+		"file",
+		"download",
+		"client",
+		"typescript",
+		"file convert",
+		"image compress"
+	],
 	"dependencies": {
 		"pdfjs-dist": "^2.16.105"
 	},

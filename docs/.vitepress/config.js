@@ -78,6 +78,7 @@ export default {
 				collapsed: true,
 				items: [
 					{ text: 'downloadToDevice', link: '/download/downloadToDevice' },
+					{ text: 'downloadFromURL', link: '/download/downloadFromURL' },
 				],
 			},
 			{

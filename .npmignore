@@ -5,3 +5,4 @@ test
 src
 package-lock.json
 docs
+.vercel
