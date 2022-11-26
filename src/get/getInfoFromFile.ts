@@ -27,6 +27,6 @@ export const getInfoFromFile = async (file: File): Promise<GetInfoFromFile> => {
 		width: imageSize.width,
 		height: imageSize.height,
 		base64,
-		extension: file?.name.split('.').pop() ?? '',
+		extension: file?.type.split('/').pop() ?? '',
 	}
 }
