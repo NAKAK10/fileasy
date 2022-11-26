@@ -1,10 +1,10 @@
 import { base64ToFile } from './base64ToFile'
-import { getDocument, GlobalWorkerOptions } from 'pdfjs-dist'
 
 export const pdfToPng = async (
 	pdfFile: File,
 	pageNum?: number
 ): Promise<File[]> => {
+	const { getDocument, GlobalWorkerOptions } = await import('pdfjs-dist')
 	// @ts-ignore
 	const pdfjsWorker = await import('pdfjs-dist/build/pdf.worker.entry')
 	GlobalWorkerOptions.workerSrc = pdfjsWorker

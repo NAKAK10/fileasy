@@ -10,7 +10,6 @@ export const fileToHTMLImageElement = async (
 		image.onload = () => {
 			resolve(image)
 		}
-		console.log(path)
 		image.src = path
 	})
 }
