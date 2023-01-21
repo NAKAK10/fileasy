@@ -30,6 +30,14 @@
   ```text
   (svgData: string | File, name?: string, fillStyle?: string) => Promise<File>
   ```
+- jpegToPng
+  ```text
+  (svgData: string | File, name?: string) => Promise<File>
+  ```
+- pngToJpeg
+  ```text
+  (svgData: string | File, name?: string, fillStyle?: string) => Promise<File>
+  ```
 - svgToPng
   ```text
   (svgData: string | File, name?: string) => Promise<File>

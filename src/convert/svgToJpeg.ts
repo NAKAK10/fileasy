@@ -33,7 +33,7 @@ export const svgToJpeg = async (
 		image.onload = () => {
 			ctx.drawImage(image, 0, 0)
 			const drawBase64 = canvas.toDataURL('image/jpeg')
-			resolve(base64ToFile(drawBase64, `${name}.jpeg` || 'tmpData.jpeg'))
+			resolve(base64ToFile(drawBase64, `${name || 'tmpData'}.jpeg`))
 		}
 		image.src = svgData as string
 	})

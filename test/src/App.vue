@@ -1,34 +1,23 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { selectFile as _selectFile, getInfoFromFile } from '../../src'
-import { isPdf, downloadFromURL } from '../../src'
+import { selectFile, getInfoFromFile } from '../../src'
+import { jpegToPng, isPng } from '../../src'
 
 const path = ref('')
 
-const selectFile = async () => {
-	// const d = await _selectFile()
-	// if (!d) return
-	// const da = await getInfoFromFile(d[0])
-	// console.log(isPdf(da.file))
-	// console.log(isPdf(da.base64))
+const testFile = async () => {
+	const image = await selectFile('image/jpeg')
+	if (!image) return
+	const filedata = await getInfoFromFile(image[0])
 
-	const path = ''
+	const a = await jpegToPng(filedata.base64)
 
-	const file = await downloadFromURL(
-		path,
-		'abc.pdf',
-		'application/pdf',
-		(progress: number) => {
-			console.log(progress)
-		}
-	)
-
-	console.log(file)
+	console.log(isPng(a))
 }
 </script>
 
 <template>
-	<button @click="selectFile">selectFile</button>
+	<button @click="testFile">selectFile</button>
 	<img :src="path" v-if="path" />
 </template>
 
