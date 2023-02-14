@@ -6,6 +6,9 @@ export const isManifest = (data: File | string) => {
 export const isCss = (data: File | string) => {
 	return isMimeType(data, 'text/css')
 }
+export const isCsv = (data: File | string) => {
+	return isMimeType(data, 'text/csv')
+}
 export const isHtml = (data: File | string) => {
 	return isMimeType(data, 'text/html')
 }
