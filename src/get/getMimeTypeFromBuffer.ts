@@ -3,8 +3,12 @@ const checkMime = (unit8: Uint8Array, check: number[]) => {
 
 	if (unit8.length < check.length) return res
 
+	res = true
+
 	for (let i = 0; i < check.length; i++) {
-		res = check[i] === unit8[i]
+		if (res) {
+			res = check[i] === unit8[i]
+		}
 	}
 
 	return res
@@ -13,7 +17,7 @@ const checkMime = (unit8: Uint8Array, check: number[]) => {
 /**
  * bufferからMIME Typeを取得する
  */
-export const getMimeTypeFromBuffer = (data: Buffer): string => {
+export const getMimeTypeFromBuffer = (data: Buffer) => {
 	const uint8arr = new Uint8Array(data)
 
 	// image
@@ -29,6 +33,10 @@ export const getMimeTypeFromBuffer = (data: Buffer): string => {
 		return 'image/gif'
 	} else if (checkMime(uint8arr, [73, 73, 42])) {
 		return 'image/tiff'
+	} else if (checkMime(uint8arr, [82, 73, 70, 70])) {
+		return 'image/webp'
+	} else if (/<svg(.+)svg>/g.test(data.toString().replace(/\n/g, ' '))) {
+		return 'image/svg+xml'
 	}
 
 	// application
@@ -36,6 +44,8 @@ export const getMimeTypeFromBuffer = (data: Buffer): string => {
 		return 'application/pdf'
 	} else if (checkMime(uint8arr, [37, 80, 68, 70, 45, 49, 46, 51])) {
 		return 'application/pdf'
+	} else if (checkMime(uint8arr, [208, 207, 17, 224, 161, 177, 26, 225])) {
+		return 'application/msword' // .doc
 	}
 
 	// video
@@ -43,14 +53,9 @@ export const getMimeTypeFromBuffer = (data: Buffer): string => {
 		return 'video/mp4'
 	}
 
-	// text
-	// else if (checkMime(uint8arr, [])) {
-	// 	return ''
-	// }
-
 	// audio
 	else if (checkMime(uint8arr, [73, 68, 51])) {
-		return 'audio/mpeg'
+		return 'audio/mpeg' // mp3
 	}
 
 	return 'application/octet-stream'
