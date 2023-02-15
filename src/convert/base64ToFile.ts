@@ -8,6 +8,9 @@ export const base64ToFile = (
 	fileName = '',
 	type = ''
 ): File => {
+	if (typeof window === 'undefined')
+		throw new Error('This function is only available on the client.')
+
 	// base64のデコード
 	const bin = window.atob(base64.replace(/^.*,/, ''))
 

@@ -13,91 +13,84 @@
 
 ## conversion
 
-- base64ToFile
-  ```text
-  (base64: string, fileName?: string, type?: string) => File
-  ```
-- fileToBase64
-  ```text
-  (file: File) => Promise<string>
-  ```
-- fileToHTMLImageElement
-  ```text
-  (path: string) => Promise<HTMLImageElement>
-  * path: base64 | dataDUI | URL
-  ```
-- svgToJpeg
-  ```text
-  (svgData: string | File, name?: string, fillStyle?: string) => Promise<File>
-  ```
-- jpegToPng
-  ```text
-  (svgData: string | File, name?: string) => Promise<File>
-  ```
-- pngToJpeg
-  ```text
-  (svgData: string | File, name?: string, fillStyle?: string) => Promise<File>
-  ```
-- svgToPng
-  ```text
-  (svgData: string | File, name?: string) => Promise<File>
-  ```
-- pdfToPng
-  ```text
-  (pdfFile: File, pageNum?: number) => Promise<File[]>
-  ```
+```js
+const base64ToFile: (base64: string, fileName?: string, type?: string) => File
+```
+
+```js
+const fileToBase64: (file: File) => Promise<string>
+```
+
+```js
+// path: base64 | dataDUI | URL
+const fileToHTMLImageElement: (path: string) => Promise<HTMLImageElement>
+```
+
+```js
+const svgToJpeg: (svgData: string | File, name?: string, fillStyle?: string) => Promise<File>
+```
+
+```js
+const jpegToPng: (svgData: string | File, name?: string) => Promise<File>
+```
+
+```js
+const pngToJpeg: (svgData: string | File, name?: string, fillStyle?: string) => Promise<File>
+```
+
+```js
+const svgToPng: (svgData: string | File, name?: string) => Promise<File>
+```
+
+```js
+const pdfToPng: (pdfFile: File, pageNum?: number) => Promise<File[]>
+```
 
 ## get
 
-- getInfoFromFile
+```js
+const getInfoFromFile: (file: File) => Promise<GetInfoFromFile>
+```
 
-  ```text
-  (file: File) => Promise<GetInfoFromFile>
-  ```
+```js
+const getMimeTypeFromBuffer: (data: Buffer) => string
+```
 
-- getDataFromByte
-  ```text
-  (size: number) => {formatNum: number; unit: string; full: string;}
-  ```
-- selectFile
-  ```text
-  (accept?: string, maxLen?: number) => Promise<File[] | undefined>
-  ```
+```js
+const getDataFromByte: (size: number) => {formatNum: number; unit: string; full: string;}
+```
+
+```js
+const getTypeFromDataURI: (base64: string) => string
+```
 
 ## other
 
-- downloadToDevice
+```js
+const downloadToDevice: (fileData?: GetInfoFromFile | File, name?: string) => void
+```
 
-  ```text
-  (fileData?: GetInfoFromFile | File) => void
-  ```
+```js
+function downloadFromURL(url: string, type: string, name: string, fun?: ((rogress: number) => void) | undefined): Promise<File>
+```
 
-- downloadFromURL
-
-  ```text
-  (url: string, type: string, name: string, fun?: ((rogress: number) => void) | undefined): Promise<File>
-  ```
-
-- selectFile
-  ```text
-  (accept?: string, maxLen?: number) => Promise<File[] | undefined>
-  ```
+```js
+const selectFile: (accept?: string, maxLen?: number) => Promise<File[] | undefined>
+```
 
 ## types
 
-- GetInfoFromFile
-
-  ```text
-  {
-      file: File;
-      path: string;
-      type: string;
-      name: string;
-      size: number;
-      stringBytes: string;
-      width: number;
-      height: number;
-      base64: string;
-      extension: string;
-  }
-  ```
+```js
+type GetInfoFromFile = {
+	file: File,
+	path: string,
+	type: string,
+	name: string,
+	size: number,
+	stringBytes: string,
+	width: number,
+	height: number,
+	base64: string,
+	extension: string,
+}
+```

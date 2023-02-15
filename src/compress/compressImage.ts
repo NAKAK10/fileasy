@@ -9,6 +9,9 @@ export const compressImage = async (
 	per: number,
 	size: number = 100
 ): Promise<File> => {
+	if (typeof window === 'undefined')
+		throw new Error('This function is only available on the client.')
+
 	const info = await getInfoFromFile(file)
 
 	if (per > 100 || per < 0)
