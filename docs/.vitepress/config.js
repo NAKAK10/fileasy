@@ -50,6 +50,8 @@ export default {
 				collapsed: true,
 				items: [
 					{ text: 'base64ToFile', link: '/convert/base64ToFile' },
+					{ text: 'binaryToString', link: '/convert/binaryToString' },
+					{ text: 'fileToArrayBuffer', link: '/convert/fileToArrayBuffer' },
 					{ text: 'fileToBase64', link: '/convert/fileToBase64' },
 					{
 						text: 'fileToHTMLImageElement',
