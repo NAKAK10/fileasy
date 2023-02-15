@@ -1,18 +1,20 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { selectFile, getInfoFromFile } from '../../src'
-import { jpegToPng, isPng } from '../../src'
+import { binaryToString, fileToArrayBuffer } from '../../src'
 
 const path = ref('')
 
 const testFile = async () => {
-	const image = await selectFile('image/jpeg')
+	const image = await selectFile()
 	if (!image) return
 	const filedata = await getInfoFromFile(image[0])
 
-	const a = await jpegToPng(filedata.base64)
+	const a = await fileToArrayBuffer(filedata.file)
 
-	console.log(isPng(a))
+	console.log(a)
+
+	console.log(await binaryToString(a))
 }
 </script>
 

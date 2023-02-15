@@ -18,6 +18,14 @@ const base64ToFile: (base64: string, fileName?: string, type?: string) => File
 ```
 
 ```js
+const binaryToString: (data: ArrayBuffer | File) => Promise<string>
+```
+
+```js
+const fileToArrayBuffer: (file: File) => Promise<ArrayBuffer>
+```
+
+```js
 const fileToBase64: (file: File) => Promise<string>
 ```
 

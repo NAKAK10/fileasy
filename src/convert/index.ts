@@ -1,5 +1,7 @@
+export * from './binaryToString'
 export * from './base64ToFile'
 export * from './fileToBase64'
+export * from './fileToArrayBuffer'
 export * from './fileToHTMLImageElement'
 export * from './svgToJpeg'
 export * from './svgToPng'
