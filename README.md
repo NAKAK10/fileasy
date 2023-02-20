@@ -58,7 +58,8 @@ const pdfToPng: (pdfFile: File, pageNum?: number) => Promise<File[]>
 const pngToHex: (buffer: Buffer) => Promise<PngToHex>
 ```
 
-> **Warning** https://fileasy.rucuru.com/convert/pngToHex.html
+> **Warning** ↑
+> <br>https://fileasy.rucuru.com/convert/pngToHex.html
 
 ## get
 
@@ -70,7 +71,8 @@ const getInfoFromFile: (file: File) => Promise<GetInfoFromFile>
 const getMimeTypeFromBuffer: (data: Buffer) => string
 ```
 
-> **Warning** https://fileasy.rucuru.com/get/getMimeTypeFromBuffer.html
+> **Warning** ↑
+> <br>https://fileasy.rucuru.com/get/getMimeTypeFromBuffer.html
 
 ```js
 const getDataFromByte: (size: number) => {formatNum: number; unit: string; full: string;}
