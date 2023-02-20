@@ -117,8 +117,8 @@ export const pngToHex = async (buffer: Buffer): Promise<PngToHex> => {
 
 		// 上の行
 		const target_up_line = outerColor.slice(
-			300 * (lineIndex - 1),
-			300 * lineIndex
+			header.width * (lineIndex - 1),
+			header.width * lineIndex
 		)
 
 		const lineColor: number[][] = []

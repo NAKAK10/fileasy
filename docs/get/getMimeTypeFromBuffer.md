@@ -4,6 +4,11 @@
 import { getMimeTypeFromBuffer } from 'fileasy'
 ```
 
+::: warning
+サポートしている MIME type は下記の`GetMimeTypeFromBuffer`のみです。
+検出できていないものに関しては`application/octet-stream`を返します。
+:::
+
 ## Example​
 
 ```ts
@@ -25,11 +30,6 @@ const pngData = getMimeTypeFromBuffer(
 )
 console.log(pngData) // 'image/png'
 ```
-
-::: warning
-サポートしている MIME type は下記の`GetMimeTypeFromBuffer`のみです。
-検出できていないものに関しては`application/octet-stream`を返します。
-:::
 
 ## Type
 

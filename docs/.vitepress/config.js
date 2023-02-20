@@ -60,6 +60,7 @@ export default {
 					},
 					{ text: 'jpegToPng', link: '/convert/jpegToPng' },
 					{ text: 'pdfToPng', link: '/convert/pdfToPng' },
+					{ text: 'pngToHex', link: '/convert/pngToHex' },
 					{ text: 'pngToJpeg', link: '/convert/pngToJpeg' },
 					{ text: 'svgToPng', link: '/convert/svgToPng' },
 					{ text: 'svgToJpeg', link: '/convert/svgToJpeg' },

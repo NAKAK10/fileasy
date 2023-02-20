@@ -54,6 +54,12 @@ const svgToPng: (svgData: string | File, name?: string) => Promise<File>
 const pdfToPng: (pdfFile: File, pageNum?: number) => Promise<File[]>
 ```
 
+```js
+const pngToHex: (buffer: Buffer) => Promise<PngToHex>
+```
+
+> **Warning** https://fileasy.rucuru.com/convert/pngToHex.html
+
 ## get
 
 ```js
@@ -102,5 +108,42 @@ type GetInfoFromFile = {
 	height: number,
 	base64: string,
 	extension: string,
+}
+
+export type GetInfoFromFile = {
+	file: File
+	path: string
+	type: string
+	name: string
+	size: number
+	stringBytes: string
+	width: number
+	height: number
+	base64: string
+	extension: string
+}
+
+type GetMimeTypeFromBuffer =
+	| 'image/png'
+	| 'image/jpeg'
+	| 'image/gif'
+	| 'image/tiff'
+	| 'image/webp'
+	| 'image/svg+xml'
+	| 'application/pdf'
+	| 'application/msword'
+	| 'video/mp4'
+	| 'audio/mpeg'
+	| 'application/octet-stream'
+
+type PngToHex = {
+	width: number
+	height: number
+	depth: number
+	color: number
+	compress: number
+	filter: number
+	interlac: number
+	data: string[]
 }
 ```

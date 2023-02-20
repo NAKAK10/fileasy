@@ -11,17 +11,19 @@ const testFile = async () => {
 	const filedata = await getInfoFromFile(image[0])
 	console.log(filedata)
 }
+
+console.log(data)
 </script>
 
 <template>
 	<button @click="testFile">selectFile</button>
 	<img :src="path" v-if="path" />
 
-	<div class="_test" :style="`width: ${data.width * 3}px`">
+	<div class="_test" :style="`width: ${data.width * 2}px`">
 		<div
 			v-for="(n, index) in data.data"
 			:key="index"
-			:style="`background: ${n}; width: 3px; height: 3px;`"
+			:style="`background: ${n}; width: 2px; height: 2px;`"
 		></div>
 	</div>
 </template>
