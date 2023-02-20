@@ -1,5 +1,8 @@
 import { GetInfoFromFile } from 'src/types'
 
+/**
+ * 端末にダウンロードする
+ */
 export const downloadToDevice = (
 	fileData?: GetInfoFromFile | File,
 	name?: string

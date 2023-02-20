@@ -1,5 +1,5 @@
 /**
- * Download from URL
+ * Fileとして、ダウンロードする
  */
 export function downloadFromURL(
 	url: string,
@@ -15,7 +15,7 @@ export function downloadFromURL(
 	xhr.onprogress = (evt: ProgressEvent) => {
 		const load = (100 * evt.loaded) / evt.total || 0
 
-		if (fun) {
+		if (fun && typeof window !== 'undefined') {
 			fun(load)
 		}
 	}

@@ -35,6 +35,7 @@ export default {
 				items: [
 					{ text: 'getInfoFromFile', link: '/get/getInfoFromFile' },
 					{ text: 'getDataFromByte', link: '/get/getDataFromByte' },
+					{ text: 'getMimeTypeFromBuffer', link: '/get/getMimeTypeFromBuffer' },
 					{ text: 'getTypeFromDataURI', link: '/get/getTypeFromDataURI' },
 				],
 			},

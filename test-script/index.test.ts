@@ -1,3 +1,3 @@
-// import './get'
-// import './judge'
+import './get'
+import './judge'
 import './convert'

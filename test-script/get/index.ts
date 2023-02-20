@@ -1,1 +1,1 @@
-import './getMimeFromBuffer'
+// import './getMimeFromBuffer'

@@ -1,36 +1,49 @@
 import { getMimeTypeFromBuffer } from '../../src'
 import { readFileSync } from 'fs'
 
-// test('getMimeTypeFromBuffer(img)', () => {
-// expect(
-// 	getMimeTypeFromBuffer(readFileSync('./test-script/media/sample.gif'))
-// ).toBe('image/gif')
-// expect(
-// 	getMimeTypeFromBuffer(readFileSync('./test-script/media/sample_2.tiff'))
-// ).toBe('image/tiff')
-// expect(
-// 	getMimeTypeFromBuffer(readFileSync('./test-script/media/sample.tiff'))
-// ).toBe('image/tiff')
-// expect(
-// 	getMimeTypeFromBuffer(readFileSync('./test-script/media/sample.webp'))
-// ).toBe('image/webp')
-// expect(
-// 	getMimeTypeFromBuffer(readFileSync('./test-script/media/sample.svg'))
-// ).toBe('image/svg+xml')
-// expect(
-// 	getMimeTypeFromBuffer(readFileSync('./test-script/media/sample_2.svg'))
-// ).toBe('image/svg+xml')
+test('getMimeTypeFromBuffer(img)', () => {
+	expect(
+		getMimeTypeFromBuffer(readFileSync('./test-script/media/sample.gif'))
+	).toBe('image/gif')
 
-// expect(
-// 	getMimeTypeFromBuffer(readFileSync('./test-script/media/sample.png'))
-// ).toBe('image/png')
-// expect(
-// 	getMimeTypeFromBuffer(readFileSync('./test-script/media/sample_a.png'))
-// ).toBe('image/apng')
-// expect(
-// 	getMimeTypeFromBuffer(readFileSync('./test-script/media/sample_a_2.png'))
-// ).toBe('image/apng')
-// })
+	expect(
+		getMimeTypeFromBuffer(readFileSync('./test-script/media/sample_2.tiff'))
+	).toBe('image/tiff')
+
+	expect(
+		getMimeTypeFromBuffer(readFileSync('./test-script/media/sample.tiff'))
+	).toBe('image/tiff')
+
+	expect(
+		getMimeTypeFromBuffer(readFileSync('./test-script/media/sample.webp'))
+	).toBe('image/webp')
+
+	expect(
+		getMimeTypeFromBuffer(readFileSync('./test-script/media/sample.svg'))
+	).toBe('image/svg+xml')
+
+	expect(
+		getMimeTypeFromBuffer(readFileSync('./test-script/media/sample_2.svg'))
+	).toBe('image/svg+xml')
+
+	expect(
+		getMimeTypeFromBuffer(readFileSync('./test-script/media/sample.png'))
+	).toBe('image/png')
+	expect(
+		getMimeTypeFromBuffer(readFileSync('./test-script/media/sample_2.png'))
+	).toBe('image/png')
+	expect(
+		getMimeTypeFromBuffer(readFileSync('./test-script/media/sample_3.png'))
+	).toBe('image/png')
+
+	// TODO
+	// expect(
+	// 	getMimeTypeFromBuffer(readFileSync('./test-script/media/sample_a.png'))
+	// ).toBe('image/apng')
+	// expect(
+	// 	getMimeTypeFromBuffer(readFileSync('./test-script/media/sample_a_2.png'))
+	// ).toBe('image/apng')
+})
 
 // test('getMimeTypeFromBuffer(application)', () => {
 // expect(

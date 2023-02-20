@@ -9,10 +9,10 @@ export const isAvif = (data: File | string) => {
 export const isGif = (data: File | string) => {
 	return isMimeType(data, 'image/gif')
 }
-export const isJpeg = (data: File | string) => {
+export const isJpeg = (data: File | string | Buffer) => {
 	return isMimeType(data, 'image/jpeg')
 }
-export const isPng = (data: File | string) => {
+export const isPng = (data: File | string | Buffer) => {
 	return isMimeType(data, 'image/png')
 }
 export const isSvg = (data: File | string) => {

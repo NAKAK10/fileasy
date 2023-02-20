@@ -1,7 +1,9 @@
-import { getTypeFromDataURI } from '../get'
+import { getTypeFromDataURI, getMimeTypeFromBuffer } from '../get'
 
-export const isMimeType = (data: File | string, type: string) => {
-	if (typeof data === 'string') {
+export const isMimeType = (data: File | string | Buffer, type: string) => {
+	if (data instanceof Buffer) {
+		return getMimeTypeFromBuffer(data) === type
+	} else if (typeof data === 'string') {
 		return getTypeFromDataURI(data) === type
 	}
 	return data.type === type

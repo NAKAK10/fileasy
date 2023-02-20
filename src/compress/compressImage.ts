@@ -3,6 +3,8 @@ import { getInfoFromFile } from '../get'
 
 /**
  * 画像を圧縮
+ * per: quality
+ * size: compression ratio of size
  */
 export const compressImage = async (
 	file: File,

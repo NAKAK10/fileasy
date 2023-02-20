@@ -1,3 +1,5 @@
+import { GetMimeTypeFromBuffer } from '../types'
+
 const checkMime = (unit8: Uint8Array, check: number[]) => {
 	let res = false
 
@@ -17,7 +19,7 @@ const checkMime = (unit8: Uint8Array, check: number[]) => {
 /**
  * bufferからMIME Typeを取得する
  */
-export const getMimeTypeFromBuffer = (data: Buffer) => {
+export const getMimeTypeFromBuffer = (data: Buffer): GetMimeTypeFromBuffer => {
 	const uint8arr = new Uint8Array(data)
 
 	// image

@@ -64,6 +64,8 @@ const getInfoFromFile: (file: File) => Promise<GetInfoFromFile>
 const getMimeTypeFromBuffer: (data: Buffer) => string
 ```
 
+> **Warning** https://fileasy.rucuru.com/get/getMimeTypeFromBuffer.html
+
 ```js
 const getDataFromByte: (size: number) => {formatNum: number; unit: string; full: string;}
 ```
