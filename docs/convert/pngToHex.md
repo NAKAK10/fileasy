@@ -4,7 +4,7 @@
 import { pngToHex } from 'fileasy'
 ```
 
-::: warnig
+::: warning
 This function is only available on the server.
 サーバーでのみ使用できます。
 :::
