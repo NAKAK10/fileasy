@@ -1,2 +1,2 @@
 // import './fileToBuffer'
-import './pngToHex'
+// import './pngToHex'
