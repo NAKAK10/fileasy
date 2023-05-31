@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { selectFile, getInfoFromFile } from '../../src'
+import { ref, nextTick } from 'vue'
+import { selectFile, getInfoFromFile, isApng } from '../../src'
 import data from './out.json'
 
 const path = ref('')
@@ -12,6 +12,10 @@ const testFile = async () => {
 	console.log(filedata)
 }
 
+nextTick(() => {
+	console.log(isApng('snvjnsdvnksjdvn'))
+})
+
 console.log(data)
 </script>
 
@@ -19,13 +23,13 @@ console.log(data)
 	<button @click="testFile">selectFile</button>
 	<img :src="path" v-if="path" />
 
-	<div class="_test" :style="`width: ${data.width * 2}px`">
+	<!-- <div class="_test" :style="`width: ${data.width * 2}px`">
 		<div
 			v-for="(n, index) in data.data"
 			:key="index"
 			:style="`background: ${n}; width: 2px; height: 2px;`"
 		></div>
-	</div>
+	</div> -->
 </template>
 
 <style scoped>
