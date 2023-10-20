@@ -1,0 +1,29 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[vue]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[sass]": { "editor.defaultFormatter": "syler.sass-indented" },
+  // emmet related
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "vue": "html"
+  },
+  // global formatting defaults
+  "editor.tabSize": 2, // make sure this is the same as .prettierrc
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.insertSpaces": true,
+  // eslint
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],
+  // sass
+  "sass.format.debug": false,
+  "sass.format.deleteEmptyRows": true,
+  "sass.format.deleteWhitespace": true,
+  "sass.format.convert": true,
+  "sass.format.setPropertySpace": true
+}
