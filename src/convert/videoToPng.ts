@@ -16,10 +16,6 @@ export const videoToPng = async (
 	const fileReader = new FileReader()
 
 	return new Promise((resolve, rejects) => {
-		setTimeout(() => {
-			rejects('timeout')
-		}, secLimit * 1000)
-
 		const video = document.createElement('video')
 
 		fileReader.onload = () => {
@@ -43,6 +39,7 @@ export const videoToPng = async (
 					setTimeout(() => {
 						URL.revokeObjectURL(url) // Safari対策
 					}, 2000)
+					video.remove()
 				} else currentCount += 1
 				return success
 			}
@@ -55,6 +52,7 @@ export const videoToPng = async (
 					video.removeEventListener('timeupdate', timeupdate)
 					video.pause()
 					rejects('snapshot failed')
+					video.remove()
 				}
 			}
 
@@ -66,6 +64,11 @@ export const videoToPng = async (
 			video.currentTime = currentTime
 			video.play()
 		}
+
+		setTimeout(() => {
+			rejects('timeout')
+			video.remove()
+		}, secLimit * 1000)
 
 		fileReader.readAsArrayBuffer(videoFile)
 	})
