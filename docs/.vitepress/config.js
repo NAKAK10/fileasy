@@ -64,6 +64,7 @@ export default {
 					{ text: 'pngToJpeg', link: '/convert/pngToJpeg' },
 					{ text: 'svgToPng', link: '/convert/svgToPng' },
 					{ text: 'svgToJpeg', link: '/convert/svgToJpeg' },
+					{ text: 'videoToPng', link: '/convert/videoToPng' },
 				],
 			},
 			{

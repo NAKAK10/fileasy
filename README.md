@@ -58,6 +58,10 @@ const pdfToPng: (pdfFile: File, pageNum?: number) => Promise<File[]>
 const pngToHex: (buffer: Buffer) => Promise<PngToHex>
 ```
 
+```js
+const videoToPng: (videoFile: File, currentTime?: number, secLimit?: number) => Promise<string>
+```
+
 > **Warning** ↑
 > <br>https://fileasy.rucuru.com/convert/pngToHex.html
 

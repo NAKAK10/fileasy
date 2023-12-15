@@ -1,14 +1,31 @@
 <script setup lang="ts">
 import { ref, nextTick } from 'vue'
-import { selectFile, getInfoFromFile, isApng } from '../../src'
+import {
+	selectFile,
+	getInfoFromFile,
+	isApng,
+	videoToPng,
+	fileToBase64,
+} from '../../src'
 
 const path = ref('')
 
 const testFile = async () => {
-	const image = await selectFile()
+	const image = await selectFile('video/mp4, video/quicktime')
+	console.log(image)
 	if (!image) return
-	const filedata = await getInfoFromFile(image[0])
-	console.log(filedata)
+
+	const res = await getInfoFromFile(image[0])
+	console.log(res)
+
+	videoToPng(image[0])
+		.then((res) => {
+			console.log(res)
+			path.value = res
+		})
+		.catch((err) => {
+			console.log(err)
+		})
 }
 
 nextTick(() => {
