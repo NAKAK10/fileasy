@@ -1,4 +1,4 @@
-# svgToPng
+# videoToPng
 
 ```ts
 import { videoToPng } from 'fileasy'
@@ -12,7 +12,7 @@ import { videoToPng, selectFile } from 'fileasy'
 const file = selectFile('video/mp4, video/quicktime')
 if (!file.length) return
 
-const base64 = await svgToPng(file[0])
+const base64 = await videoToPng(file[0])
 console.log(base64)
 // 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...'
 ```
